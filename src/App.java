@@ -1,4 +1,4 @@
-import Fruits.Fruit;
+import fruits.Fruit;
 
 public class App {
     public static void main(String[] args) throws Exception {

@@ -1,4 +1,4 @@
-package Fruits;
+package fruits;
 
 /**
  * Fruit
