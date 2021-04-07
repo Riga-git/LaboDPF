@@ -1,11 +1,11 @@
 package commande;
-import fruits.Fruit;
+import fruits.ComposantFruit;
 
 public class Commande {
     private static Commande instance = null;
     private static final int maxFruits = 5;
     private int currentIndex = 0;
-    private Fruit[] fruits = new Fruit[maxFruits];
+    private ComposantFruit[] fruits = new ComposantFruit[maxFruits];
 
     private Commande(){
         super();
@@ -18,7 +18,7 @@ public class Commande {
         return Commande.instance;
     }
 
-    public void ajouterFruit(Fruit newFruit){
+    public void ajouterFruit(ComposantFruit newFruit){
         if (currentIndex < maxFruits){
             fruits[currentIndex] = newFruit;
             currentIndex++;
@@ -29,10 +29,12 @@ public class Commande {
 
     public void AfficherCommande(){
         System.out.println("------------------ Ma liste -------------------");
-        for (Fruit fruit : fruits) {
-            fruit.afficherFruit();
-            fruit.afficherCalories();
-            System.out.println("----------------------------------------------");
+        for (ComposantFruit fruit : fruits) {
+            if (fruit != null){
+                fruit.afficherFruit();
+                fruit.afficherCalories();
+                System.out.println("----------------------------------------------");
+            }
         }
     }
 }

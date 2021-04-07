@@ -5,7 +5,7 @@ import calorie.FruitCalorie;
 /**
  * Fruit
  */
-public class Fruit {
+public class Fruit extends ComposantFruit{
 
     private String nom;
     private Boolean pepin;
