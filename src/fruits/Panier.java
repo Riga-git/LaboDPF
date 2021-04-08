@@ -5,17 +5,17 @@ import java.util.ArrayList;
 public class Panier extends Produit {
 
     private String nom = new String();
+    private ArrayList<Produit> listeFruits = new ArrayList<Produit>();
+
     public Panier(String nom){
         this.nom = nom;
     }
 
-    private ArrayList<Fruit> listeFruits = new ArrayList<Fruit>();
-
-    public void ajouterFruit(Fruit fruit){
+    public void ajouterFruit(Produit fruit){
         listeFruits.add(fruit);
     }
 
-    public void supprimetFruit(Fruit fruit){
+    public void supprimetFruit(Produit fruit){
         listeFruits.remove(fruit);
     }
 
@@ -25,7 +25,7 @@ public class Panier extends Produit {
 
     public void afficherFruit(){
         System.out.print(getNom() + "( ");
-        for (Fruit fruit : listeFruits)
+        for (Produit fruit : listeFruits)
             System.out.print(fruit.getNom() + " ");
         System.out.print(" )\n");
     }
