@@ -2,7 +2,7 @@ package fruits;
 
 import java.util.ArrayList;
 
-public class Panier extends ComposantFruit {
+public class Panier extends Produit {
 
     private String nom = new String();
     public Panier(String nom){

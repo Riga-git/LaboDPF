@@ -1,6 +1,6 @@
 package fruits;
 
-public abstract class ComposantFruit {
+public abstract class Produit {
     public abstract void afficherFruit();
 
     public abstract String getNom();

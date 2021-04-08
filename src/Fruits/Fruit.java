@@ -5,7 +5,7 @@ import calorie.FruitCalorie;
 /**
  * Fruit
  */
-public class Fruit extends ComposantFruit{
+public class Fruit extends Produit{
 
     private String nom;
     private Boolean pepin;
@@ -21,6 +21,9 @@ public class Fruit extends ComposantFruit{
         this.nom = nom;
         this.pepin = pepin;
         this.fruitCalorieType = fruitCalorie;
+    }
+
+    public Fruit() {
     }
 
     // Getter & Setter 
