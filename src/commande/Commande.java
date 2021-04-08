@@ -1,4 +1,5 @@
 package commande;
+import fruits.Fruit;
 import fruits.Produit;
 
 public class Commande {
@@ -23,7 +24,7 @@ public class Commande {
             fruits[currentIndex] = newFruit;
             currentIndex++;
         }else{
-            System.out.println("impossible ajouter le fruit " + newFruit.getNom() + " car la liste est pleine!");
+            System.out.println("impossible ajouter le produit car la liste est pleine!");
         }
     }
 
@@ -32,7 +33,8 @@ public class Commande {
         for (Produit fruit : fruits) {
             if (fruit != null){
                 fruit.afficherFruit();
-                fruit.afficherCalories();
+                if (fruit instanceof Fruit)
+                    ((Fruit) fruit).afficherCalories();
                 System.out.println("----------------------------------------------");
             }
         }
