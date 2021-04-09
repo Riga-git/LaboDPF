@@ -24,10 +24,17 @@ public class Panier implements Produit {
     }
 
     public void afficherFruit(){
+        Boolean avecPepins = false;
         System.out.print(getNom() + "( ");
-        for (Fruit fruit : listeFruits)
+        for (Fruit fruit : listeFruits){
             System.out.print(fruit.getNom() + " ");
-        System.out.print(" )\n");
+            avecPepins ^= fruit.getPepin();
+        }
+        if (avecPepins){
+            System.out.print(") - avec pepins\n");
+        }else{
+            System.out.print(") - sans pepins\n");
+        }
     }
 
     public void afficherCalories(){};

@@ -21,7 +21,6 @@ public class App {
         commande.ajouterFruit(banane);
         commande.ajouterFruit(pomme);
         commande.ajouterFruit(orange);
-
         commande.AfficherCommande();
 
         // panier 1
