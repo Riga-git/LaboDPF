@@ -1,5 +1,4 @@
 package commande;
-import fruits.Fruit;
 import fruits.Produit;
 
 public class Commande {

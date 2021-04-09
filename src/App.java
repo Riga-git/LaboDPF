@@ -1,5 +1,7 @@
 import calorie.*;
 import commande.Commande;
+import decoration.Egal;
+import decoration.Etoile;
 import fruits.Fruit;
 import fruits.Panier;
 
@@ -20,7 +22,7 @@ public class App {
         Commande commande = Commande.getInstance();
         commande.ajouterFruit(banane);
         commande.ajouterFruit(pomme);
-        commande.ajouterFruit(orange);
+        commande.ajouterFruit(new Etoile(orange));
         commande.AfficherCommande();
 
         // panier 1
@@ -33,7 +35,7 @@ public class App {
         panier2.ajouterFruit(new Fruit("Magnifique_Banane", false));
         panier2.ajouterFruit(new Fruit("Magnifique_Pomme", false));
   
-        commande.ajouterFruit(panier1);
+        commande.ajouterFruit(new Egal(panier1));
         commande.ajouterFruit(panier2);
         commande.AfficherCommande();
     }
