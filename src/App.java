@@ -38,5 +38,8 @@ public class App {
         commande.ajouterFruit(new Egal(panier1));
         commande.ajouterFruit(panier2);
         commande.AfficherCommande();
+
+        commande.traitterCommande();
+        commande.traitterCommande();
     }
 }

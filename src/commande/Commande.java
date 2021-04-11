@@ -1,4 +1,6 @@
 package commande;
+import commande.etat.EnAttente;
+import commande.etat.EtatCommande;
 import fruits.Produit;
 
 public class Commande {
@@ -6,9 +8,11 @@ public class Commande {
     private static final int maxFruits = 5;
     private int currentIndex = 0;
     private Produit[] fruits = new Produit[maxFruits];
+    private EtatCommande etatCommande = null;
 
     private Commande(){
         super();
+        etatCommande = new EnAttente(this);
     }
 
     public final synchronized static Commande getInstance() {
@@ -35,5 +39,13 @@ public class Commande {
                 System.out.println("----------------------------------------------");
             }
         }
+    }
+
+    public void definirEtat(EtatCommande etat){
+        this.etatCommande = etat;
+    }
+
+    public void traitterCommande(){
+        etatCommande.traitterCommande(this);
     }
 }
