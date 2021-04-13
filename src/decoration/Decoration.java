@@ -19,4 +19,16 @@ public class Decoration implements Produit{
             System.out.print(decoration);
         System.out.print("\n");
     }
+
+    @Override
+    public String getNom() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public Boolean getPepin() {
+        // TODO Auto-generated method stub
+        return null;
+    }
 }
