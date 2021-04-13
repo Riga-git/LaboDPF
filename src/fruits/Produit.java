@@ -1,9 +1,19 @@
 package fruits;
 
-public interface Produit {
-    public void afficherFruit();
+public abstract class Produit {
 
-    public String getNom();
+    protected String nom;
+    protected Boolean pepin;
 
-    public Boolean getPepin();
+    public void setPepin(Boolean pepin){
+        this.pepin = pepin;
+    }
+
+    public void setNom(String nom){
+        this.nom = nom;
+    }
+
+    public abstract void afficherFruit();
+    public abstract String getNom();
+    public abstract Boolean getPepin();
 }

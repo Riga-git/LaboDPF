@@ -2,13 +2,12 @@ package fruits;
 
 import java.util.ArrayList;
 
-public class Panier implements Produit {
+public class Panier extends Produit {
 
-    private String nom = new String();
     private ArrayList<Produit> listeProduits = new ArrayList<Produit>();
 
     public Panier(String nom){
-        this.nom = nom;
+        setNom(nom);
     }
 
     public void ajouterFruit(Produit produit){
@@ -20,7 +19,7 @@ public class Panier implements Produit {
     }
 
     public String getNom(){
-        String nom =  this.nom + "(";
+        String nom =  super.nom + "(";
         for (Produit produit : listeProduits){
            nom += (produit.getNom() + " ");
         } 
