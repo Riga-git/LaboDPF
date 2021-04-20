@@ -2,7 +2,7 @@ package decoration;
 
 import fruits.Produit;
 
-public class Decoration implements Produit{
+public class Decoration extends Produit{
 
     @Override
     public void afficherFruit() {
@@ -18,5 +18,15 @@ public class Decoration implements Produit{
         for (int i = 0 ; i < 20 ; i++)
             System.out.print(decoration);
         System.out.print("\n");
+    }
+
+    @Override
+    public String getNom() {
+        return null;
+    }
+
+    @Override
+    public Boolean getPepin() {
+        return null;
     }
 }

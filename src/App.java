@@ -34,7 +34,8 @@ public class App {
         panier2.ajouterFruit(avocat);
         panier2.ajouterFruit(new Fruit("Magnifique_Banane", false));
         panier2.ajouterFruit(new Fruit("Magnifique_Pomme", false));
-  
+        panier2.ajouterFruit(panier1);
+
         commande.ajouterFruit(new Egal(panier1));
         commande.ajouterFruit(panier2);
         commande.AfficherCommande();
