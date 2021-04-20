@@ -2,32 +2,46 @@ package fruits;
 
 import java.util.ArrayList;
 
-public class Panier implements Produit {
+public class Panier extends Produit {
 
-    private String nom = new String();
-    private ArrayList<Fruit> listeFruits = new ArrayList<Fruit>();
+    private ArrayList<Produit> listeProduits = new ArrayList<Produit>();
 
     public Panier(String nom){
-        this.nom = nom;
+        setNom(nom);
     }
 
-    public void ajouterFruit(Fruit fruit){
-        listeFruits.add(fruit);
+    public void ajouterFruit(Produit produit){
+        listeProduits.add(produit);
     }
 
     public void supprimetFruit(Produit fruit){
-        listeFruits.remove(fruit);
+        listeProduits.remove(fruit);
     }
 
     public String getNom(){
-        return this.nom;
+        String nom =  super.nom + "(";
+        for (Produit produit : listeProduits){
+           nom += (produit.getNom() + " ");
+        } 
+        nom += ")";
+        return nom;
+    }
+
+    public Boolean getPepin(){
+        Boolean avecPepins = false;
+        for (Produit produit : listeProduits){
+            avecPepins ^= produit.getPepin();
+        }
+        return avecPepins;
     }
 
     public void afficherFruit(){
-        System.out.print(getNom() + "( ");
-        for (Fruit fruit : listeFruits)
-            System.out.print(fruit.getNom() + " ");
-        System.out.print(" )\n");
+        System.out.print(getNom());
+        if (getPepin()){
+            System.out.println("-Avec pepins");
+        }else{
+            System.out.println("-Sans pepins");
+        }
     }
 
     public void afficherCalories(){};

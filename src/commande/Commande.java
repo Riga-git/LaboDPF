@@ -1,5 +1,4 @@
 package commande;
-import fruits.Fruit;
 import fruits.Produit;
 
 public class Commande {
@@ -33,8 +32,6 @@ public class Commande {
         for (Produit fruit : fruits) {
             if (fruit != null){
                 fruit.afficherFruit();
-                if (fruit instanceof Fruit)
-                    ((Fruit) fruit).afficherCalories();
                 System.out.println("----------------------------------------------");
             }
         }

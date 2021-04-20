@@ -5,42 +5,28 @@ import calorie.FruitCalorie;
 /**
  * Fruit
  */
-public class Fruit implements Produit{
-
-    private String nom;
-    private Boolean pepin;
+public class Fruit extends Produit{
     private FruitCalorie fruitCalorieType = null;
     
     // Constucteurs 
     public Fruit(String nom, Boolean pepin){
-        this.nom = nom;
-        this.pepin = pepin;
+        setNom(nom);
+        setPepin(pepin);
     }
 
     public Fruit(String nom, Boolean pepin, FruitCalorie fruitCalorie ){
-        this.nom = nom;
-        this.pepin = pepin;
+        setNom(nom);
+        setPepin(pepin);
         this.fruitCalorieType = fruitCalorie;
     }
 
-    public Fruit() {
-    }
-
     // Getter & Setter 
-    public void setNom(String nom){
-        this.nom = nom;
-    }
-
     public String getNom(){
-        return this.nom;
-    }
-
-    public void setPepin(Boolean pepin){
-        this.pepin = pepin;
+        return super.nom;
     }
 
     public Boolean getPepin(){
-        return this.pepin;
+        return super.pepin;
     }
 
     public void setFruitCalorieType(FruitCalorie fruitCalorie){
