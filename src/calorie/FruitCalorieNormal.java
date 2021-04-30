@@ -1,15 +1,20 @@
 package calorie;
 
-import calorie.api.CaloriesNormal;
+import calorie.api.Calorie;
 
 /**
  * FruitCalorieNormal
  */
 public class FruitCalorieNormal  extends FruitCalorie{
 
-    @Override
-    public float calculerCalories(String nom) {
-        return CaloriesNormal.calculCalorie(nom);
+    Calorie calculateur;
+
+    public FruitCalorieNormal(Calorie calculateur){
+        this.calculateur = calculateur;
     }
-    
+
+    @Override
+    public double calculerCalories(String nom) {
+        return this.calculateur.calculCalorie(nom);
+    }
 }

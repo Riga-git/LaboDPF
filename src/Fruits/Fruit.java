@@ -1,7 +1,6 @@
 package fruits;
 
 import calorie.FruitCalorie;
-import calorie.Subjects.Subject;
 import calorie.observer.Observer;
 
 /**
@@ -11,7 +10,6 @@ public class Fruit implements Observer{
 
     private String nom;
     private Boolean pepin;
-    private Float calorieRatio;
     private FruitCalorie fruitCalorieType = null;
     
     // Constucteurs 
@@ -57,12 +55,13 @@ public class Fruit implements Observer{
             System.out.println("Calories inconnues");  
         }
         else{
-            System.out.println("Ce fruit à " + this.fruitCalorieType.calculerCalories(this.nom)*calorieRatio + " calories");  
+            System.out.println("Ce fruit à " + this.fruitCalorieType.calculerCalories(this.nom) + " calories");  
         }
     }
 
     @Override
-    public void notifier() {
+    public void notification(){
+        System.out.print(this.nom + ": ");  
         this.afficherCalories();       
     }
 }

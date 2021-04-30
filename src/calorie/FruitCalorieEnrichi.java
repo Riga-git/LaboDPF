@@ -1,15 +1,20 @@
 package calorie;
 
-import calorie.api.CaloriesEnrichi;
+import calorie.api.Calorie;
 
 /**
  * FruitCalorieEnrichi
  */
 public class FruitCalorieEnrichi extends FruitCalorie{
 
-    @Override
-    public float calculerCalories(String nom) {
-        return CaloriesEnrichi.calculCalorie(nom);
+    Calorie calculateur;
+
+    public FruitCalorieEnrichi(Calorie calculateur){
+        this.calculateur = calculateur;
     }
-    
+
+    @Override
+    public double calculerCalories(String nom) {
+        return this.calculateur.calculCalorie(nom);
+    }
 }

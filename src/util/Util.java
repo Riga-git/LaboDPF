@@ -1,8 +1,8 @@
 package util;
+import calorie.Subjects.Subject;
 
-public class Util {
-
-	public static int calculCalorie(String value) {
+public class Util extends Subject {
+	public static double calculCalorie(String value) {
 		if(value != null && value.length() > 0) {
 			char[] charArray = value.toCharArray();
 			int calorie = 0;
@@ -13,5 +13,4 @@ public class Util {
 		}
 		return 1;
 	}
-	
 }

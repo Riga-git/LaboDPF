@@ -1,7 +1,5 @@
 package calorie.Subjects;
-
 import java.util.HashSet;
-
 import calorie.observer.Observer;
 
 public class Subject {
@@ -17,7 +15,7 @@ public class Subject {
   
      public void NotifierObserveurs(){
         for (Observer observer : observers) {
-           observer.notifier();
+           observer.notification();
         }
      } 	
 }

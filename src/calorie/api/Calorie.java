@@ -2,15 +2,17 @@ package calorie.api;
 
 import calorie.Subjects.Subject;
 
-public class Calorie extends Subject{
-    protected static Float calorieRatio;
+public abstract class Calorie extends Subject{
+    protected Double calorieRatio;
 
     public Calorie(){
-        calorieRatio = (float) 1.0;
+        calorieRatio = 1.0;
     } 
 
-    public void updateCalorieRatio(Float ratio){
-        Calorie.calorieRatio = ratio;
+    public abstract double calculCalorie(String nom);
+
+    public void updateCalorieRatio(double ratio){
+        this.calorieRatio = ratio;
         NotifierObserveurs();
     }
     
