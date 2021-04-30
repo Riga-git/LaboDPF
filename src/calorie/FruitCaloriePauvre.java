@@ -8,7 +8,7 @@ import calorie.api.CaloriesPauvre;
 public class FruitCaloriePauvre  extends FruitCalorie{
 
     @Override
-    public int calculerCalories(String nom) {
+    public float calculerCalories(String nom) {
         return CaloriesPauvre.calculCalorie(nom);
     }
     

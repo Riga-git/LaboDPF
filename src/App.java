@@ -23,5 +23,7 @@ public class App {
         commande.ajouterFruit(banane); // 6éme -> ingnoré
 
         commande.AfficherCommande();
+
+        //orange.setFruitCalorieType(fruitCalorie);
     }
 }

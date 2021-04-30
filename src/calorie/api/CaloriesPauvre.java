@@ -2,10 +2,10 @@ package calorie.api;
 
 import util.Util;
 
-public class CaloriesPauvre{
+public class CaloriesPauvre extends Calorie{
 	
-	public static int calculCalorie(String nom) {
-		return Util.calculCalorie(nom);
+	public static float calculCalorie(String nom) {
+		return Util.calculCalorie(nom) * calorieRatio;
 	}
 
 }

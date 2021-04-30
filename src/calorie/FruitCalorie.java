@@ -1,8 +1,10 @@
 package calorie;
 
+import calorie.observer.Observer;
+
 /**
  * FruitCalorie
  */
 public abstract class FruitCalorie {
-    public abstract int calculerCalories(String name);
-}
+    public abstract float calculerCalories(String name);       
+} 
