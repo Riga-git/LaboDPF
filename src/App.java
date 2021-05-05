@@ -10,9 +10,10 @@ public class App {
 
         FruitCalorie fruitCalorieEnrichi = new FruitCalorieEnrichi();
         FruitCalorie fruitCaloriePauvre = new FruitCaloriePauvre();
+        FruitCalorie fruitCalorieSuper = new FruitCalorieSuper();
 
         Fruit orange = new Fruit("Orange", true);
-        Fruit avocat = new Fruit("Avocat", false, fruitCalorieEnrichi);
+        Fruit avocat = new Fruit("Avocat", false, fruitCalorieSuper);
         Fruit pomme = new Fruit("Pomme", true, fruitCaloriePauvre);
         Fruit banane = new Fruit("Banane", false, fruitCalorieEnrichi);
         Panier panier1 = new Panier("Panier 1");
