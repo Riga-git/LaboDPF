@@ -11,6 +11,8 @@ public class LegumeFactory {
             return new Vapeur();
         else if (type.equals("Cuisson"))
             return new Cuisson();
+        else if (type.equals("Four"))
+            return new Four();
         else
             return null;
     }

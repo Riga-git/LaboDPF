@@ -6,8 +6,10 @@ public class App {
         LegumeFactory factory = new LegumeFactory();
         Menu menu1 = new Menu("Menu vapeur", factory.getLegume("Vapeur"));
         Menu menu2 = new Menu("Menu cuisson", factory.getLegume("Cuisson"));
+        Menu menu3 = new Menu("Menu Four", factory.getLegume("Four"));
 
         menu1.description();
         menu2.description();
+        menu3.description();
     }
 }
