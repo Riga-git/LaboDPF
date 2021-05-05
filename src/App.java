@@ -42,5 +42,7 @@ public class App {
 
         commande.traitterCommande();
         commande.traitterCommande();
+        commande.traitterCommande();
+        commande.traitterCommande();
     }
 }
