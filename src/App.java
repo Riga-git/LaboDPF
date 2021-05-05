@@ -1,5 +1,6 @@
 import calorie.*;
 import commande.Commande;
+import decoration.And;
 import decoration.Egal;
 import decoration.Etoile;
 import fruits.Fruit;
@@ -21,7 +22,7 @@ public class App {
         //commande
         Commande commande = Commande.getInstance();
         commande.ajouterFruit(banane);
-        commande.ajouterFruit(pomme);
+        commande.ajouterFruit(new And(pomme));
         commande.ajouterFruit(new Etoile(orange));
         commande.AfficherCommande();
 
